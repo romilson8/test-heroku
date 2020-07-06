@@ -2,6 +2,8 @@ package testando_o_heruko;
 
 
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,8 +20,8 @@ public class TestResource {
 	private PessoaRepository repository;
 	
 	@GetMapping
-	public String hello() {
-		return "Hello Heroku";
+	public List<Pessoa> getPessoa() {
+		return repository.findAll();
 	}
 	
 	@PostMapping
@@ -27,5 +29,7 @@ public class TestResource {
 		Pessoa pessoaSalva = repository.save(p);
 		return ResponseEntity.ok(pessoaSalva);
 	}
+	
+	
 
 }
