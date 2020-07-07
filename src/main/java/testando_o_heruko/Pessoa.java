@@ -15,7 +15,7 @@ public class Pessoa implements Serializable{
 
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private Integer codigo;
+	private Integer id;
 	
 	private String nome;
 	
@@ -29,7 +29,7 @@ public class Pessoa implements Serializable{
 	public Pessoa() {}
 
 	public Integer getCodigo() {
-		return codigo;
+		return id;
 	}
 
 	public String getNome() {
@@ -41,7 +41,7 @@ public class Pessoa implements Serializable{
 	}
 
 	public void setCodigo(Integer codigo) {
-		this.codigo = codigo;
+		this.id = codigo;
 	}
 
 	public void setNome(String nome) {
