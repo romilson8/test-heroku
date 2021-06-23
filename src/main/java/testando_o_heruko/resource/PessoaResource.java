@@ -31,6 +31,7 @@ public class PessoaResource {
 
 	@GetMapping("/{id}")
 	public Pessoa getPessoaById(@PathVariable("id") Integer id) {
+
 		return pessoaService.findById(id);
 	}
 	
