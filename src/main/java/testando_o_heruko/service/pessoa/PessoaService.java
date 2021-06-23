@@ -11,7 +11,7 @@ public interface PessoaService {
 
     Pessoa save(Pessoa p);
 
-    Pessoa findById(Integer id) throws NotFoundException;
+    Pessoa findById(Integer id);
 
     void delete(Integer id);
 }

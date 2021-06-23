@@ -28,6 +28,11 @@ public class PessoaResource {
 	public List<Pessoa> getPessoa() {
 		return pessoaService.findAll();
 	}
+
+	@GetMapping("/{id}")
+	public Pessoa getPessoaById(@PathVariable("id") Integer id) {
+		return pessoaService.findById(id);
+	}
 	
 	@PostMapping
 	public ResponseEntity<Pessoa> criarPessoa(@RequestBody Pessoa pessoa){
