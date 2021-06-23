@@ -1,4 +1,4 @@
-package testando_o_heruko;
+package testando_o_heruko.entity;
 
 
 
@@ -10,7 +10,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 
 @Entity
-public class Pessoa implements Serializable{
+public class Pessoa implements Serializable {
 	private static final long serialVersionUID = 1L;
 
 	@Id

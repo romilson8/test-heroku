@@ -1,4 +1,4 @@
-package testando_o_heruko;
+package testando_o_heruko.resource;
 
 
 
@@ -13,29 +13,31 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import testando_o_heruko.entity.Pessoa;
+import testando_o_heruko.repository.PessoaRepository;
+import testando_o_heruko.service.pessoa.PessoaService;
 
 @RestController
-@RequestMapping("/test-h")
-public class TestResource {
+@RequestMapping("/pessoa")
+public class PessoaResource {
 	
 	@Autowired
-	private PessoaRepository repository;
+	private PessoaService pessoaService;
 	
 	@GetMapping
 	public List<Pessoa> getPessoa() {
-		return repository.findAll();
+		return pessoaService.findAll();
 	}
 	
 	@PostMapping
-	public ResponseEntity<Pessoa> criarPessoa(@RequestBody Pessoa p){
-		Pessoa pessoaSalva = repository.save(p);
+	public ResponseEntity<Pessoa> criarPessoa(@RequestBody Pessoa pessoa){
+		Pessoa pessoaSalva = pessoaService.save(pessoa);
 		return ResponseEntity.ok(pessoaSalva);
 	}
 	
 	@DeleteMapping("/{id}")
 	public void apagarPessoa(@PathVariable("id") Integer id) {
-		Pessoa p = repository.findById(id).orElseThrow(() -> new IllegalArgumentException("Id não existe"));
-		repository.delete(p);
+		pessoaService.delete(id);
 	}
 	
 
