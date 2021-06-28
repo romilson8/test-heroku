@@ -1,13 +1,14 @@
-package testando_o_heruko.entity;
+package nutrin.entity;
 
 
-
-import java.io.Serializable;
+import nutrin.handler.ExtendedEmailValidator;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import java.io.Serializable;
 
 @Entity
 public class Pessoa implements Serializable {
@@ -18,7 +19,8 @@ public class Pessoa implements Serializable {
 	private Integer id;
 	
 	private String nome;
-	
+
+	@ExtendedEmailValidator
 	private String email;
 
 	public Pessoa(String nome, String email) {

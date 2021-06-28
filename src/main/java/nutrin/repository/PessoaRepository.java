@@ -1,9 +1,9 @@
-package testando_o_heruko.repository;
+package nutrin.repository;
 
 
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import testando_o_heruko.entity.Pessoa;
+import nutrin.entity.Pessoa;
 
 public interface PessoaRepository extends JpaRepository<Pessoa, Integer>{
 

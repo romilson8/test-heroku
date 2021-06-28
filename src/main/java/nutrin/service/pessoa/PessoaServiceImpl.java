@@ -1,10 +1,10 @@
-package testando_o_heruko.service.pessoa;
+package nutrin.service.pessoa;
 
 import org.hibernate.ObjectNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import testando_o_heruko.entity.Pessoa;
-import testando_o_heruko.repository.PessoaRepository;
+import nutrin.entity.Pessoa;
+import nutrin.repository.PessoaRepository;
 
 import java.util.List;
 

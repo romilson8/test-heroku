@@ -1,4 +1,4 @@
-package testando_o_heruko.resource;
+package nutrin.resource;
 
 
 
@@ -13,9 +13,10 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
-import testando_o_heruko.entity.Pessoa;
-import testando_o_heruko.repository.PessoaRepository;
-import testando_o_heruko.service.pessoa.PessoaService;
+import nutrin.entity.Pessoa;
+import nutrin.service.pessoa.PessoaService;
+
+import javax.validation.Valid;
 
 @RestController
 @RequestMapping("/pessoa")
@@ -36,7 +37,7 @@ public class PessoaResource {
 	}
 	
 	@PostMapping
-	public ResponseEntity<Pessoa> criarPessoa(@RequestBody Pessoa pessoa){
+	public ResponseEntity<Pessoa> criarPessoa(@Valid @RequestBody Pessoa pessoa){
 		Pessoa pessoaSalva = pessoaService.save(pessoa);
 		return ResponseEntity.ok(pessoaSalva);
 	}

@@ -1,10 +1,8 @@
-package testando_o_heruko.service.pessoa;
+package nutrin.service.pessoa;
 
-import javassist.NotFoundException;
-import testando_o_heruko.entity.Pessoa;
+import nutrin.entity.Pessoa;
 
 import java.util.List;
-import java.util.Optional;
 
 public interface PessoaService {
     List<Pessoa> findAll();
