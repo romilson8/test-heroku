@@ -1,8 +1,8 @@
-GET http://localhost:8080/pessoa/q
+GET https://teste-heroku-ro.herokuapp.com/pessoa/2
 Accept: application/json
 
 ###
-DELETE http://localhost:8080/pessoa/2
+DELETE http://localhost:8080/pessoa/1
 Accept: application/json
 
 

@@ -4,9 +4,9 @@
 https://teste-heroku-ro.herokuapp.com/pessoa
 
 ## _Documentação_
-http://localhost:8080/swagger-ui.html
+https://teste-heroku-ro.herokuapp.com/swagger-ui.html
 ### _baixar yaml_
-http://localhost:8080/v3/api-docs.yaml
+https://teste-heroku-ro.herokuapp.com/v3/api-docs.yaml
 
 
 
